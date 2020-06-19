@@ -1,0 +1,5 @@
+#!/bin/bash
+
+mkname="$(hostnamectl | grep hostname | sed -E 's/(.*)-(.*)/\2/')"
+
+figlet -ct -f doom $mkname
