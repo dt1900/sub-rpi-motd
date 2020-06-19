@@ -19,3 +19,9 @@ Running Processes.: $(ps ax | wc -l | tr -d " ")
 Core Temperature..: $(perl -e 'm/(\d+)/; $c=$1/1000; s/\d+//; $f = $c * 9 / 5 + 32; for ($f, $cputemp){ $_ = sprintf ( "%.1f" ,  $_  ) }; print "$c° C ($f° F)";' -p /sys/class/thermal/thermal_zone0/temp)
 IP Addresses......: $(ip a | grep glo | awk '{print $2}' | head -1 | cut -f1 -d/) and $(wget -q -O - http://icanhazip.com/ | tail)
 "
+echo "AWS: " 
+aws --version
+echo "python: "
+python --version
+echo "node: "
+node -v
